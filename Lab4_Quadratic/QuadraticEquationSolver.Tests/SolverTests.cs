@@ -44,10 +44,10 @@ public class SolverTests
     // xUnit Theory: exercises several coefficient sets and their expected roots/message
     // in a single, data-driven test, as recommended by the lab instructions.
     [Theory]
-    [InlineData(1, 0, -4, 2, -2, "Two real roots.")]
-    [InlineData(2, 4, 2, -1, null, "One real root.")]
-    [InlineData(1, 1, 1, null, null, "No real roots.")]
-    [InlineData(1, -5, 6, 3, 2, "Two real roots.")]
+    [InlineData(1.0, 0.0, -4.0, 2.0, -2.0, "Two real roots.")]
+    [InlineData(2.0, 4.0, 2.0, -1.0, null, "One real root.")]
+    [InlineData(1.0, 1.0, 1.0, null, null, "No real roots.")]
+    [InlineData(1.0, -5.0, 6.0, 3.0, 2.0, "Two real roots.")]
     public void Solve_MultipleScenarios(double a, double b, double c,
         double? expectedRoot1, double? expectedRoot2, string expectedMessage)
     {
@@ -65,3 +65,4 @@ public class SolverTests
             Assert.Equal(expectedRoot2.Value, result.Root2!.Value, 6);
     }
 }
+
